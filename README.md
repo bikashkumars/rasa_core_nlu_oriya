@@ -1,4 +1,4 @@
-# RASA NLU English and Oriya
+# RASA Core+NLU English and Oriya
 Chat Bot Natural Language Understanding for Oriya and English Language
 
 ## System Requirement
@@ -69,7 +69,6 @@ python -m rasa_core.train -d domain.yml -s stories.md -o models/dialogue
 ```
 python -m rasa_core.run -d models/dialogue -u models/current/nlu
 ```
-
 
 ## Versions
 pip show rasa_core
