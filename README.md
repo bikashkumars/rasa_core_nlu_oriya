@@ -1,5 +1,5 @@
 # RASA Core+NLU English and Oriya
-Chat Bot Natural Language Understanding for Oriya and English Language
+Chat Bot Natural Language Understanding and Processing for Oriya and English Language
 
 ## System Requirement
 1. Ubuntu 16+
@@ -17,13 +17,17 @@ conda install python=3.6
 
 ## Create Environment for Rasa Project under Python 3.6
 We except you have install python 3.6 using Conda command
+```
 conda create -n rasa python=3.6
+```
 
 ## Install Visual studio Code and Open a Empty Folder
 https://code.visualstudio.com/download
 
 ## Activate python 3.6 using Conda (important step)
+```
 source activate rasa
+```
 
 ## Install Required Python Packages
 Install Rasa NLU, Tensorflow, Spacy, Spacy ENG lang and Rasa Core
