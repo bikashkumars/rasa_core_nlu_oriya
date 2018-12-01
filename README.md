@@ -26,30 +26,50 @@ https://code.visualstudio.com/download
 source activate rasa
 
 ## Install Required Python Packages
-1. pip install  --no-cache-dir rasa_nlu
-2. pip install  --no-cache-dir rasa_nlu[spacy]
-3. python -m spacy download en_core_web_md
-4. python -m spacy link en_core_web_md en
-5. pip install  --no-cache-dir rasa_nlu[tensorflow]
+Install Rasa NLU, Tensorflow, Spacy, Spacy ENG lang and Rasa Core
+```
+pip install  --no-cache-dir rasa_nlu
+pip install  --no-cache-dir rasa_nlu[spacy]
+python -m spacy download en_core_web_md
+python -m spacy link en_core_web_md en
+pip install  --no-cache-dir rasa_nlu[tensorflow]
+pip install -U rasa_core==0.11.11
+```
 
 ## Clone this repo
+```
 git clone git@github.com:bikashkumars/rasa_nlu_oriya.git
+```
 
 ## Run Rasa command to create Model
+```
 python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
+```
 
 ## Test
+```
 python index.py
+```
 
 ## Run as Server
+```
 python -m rasa_nlu.server --path projects
+```
+
+# Information
+So far, you have suceefully completed RASA NLU. Now we will move to Rasa Core
 
 
 ## Train Rasa Core using Story and Domain
+```
 python -m rasa_core.train -d domain.yml -s stories.md -o models/dialogue
+```
 
 ## Run rasa Code as Server
+```
 python -m rasa_core.run -d models/dialogue -u models/current/nlu
+```
+
 
 ## Versions
 pip show rasa_core
