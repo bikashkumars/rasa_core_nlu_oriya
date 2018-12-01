@@ -11,9 +11,11 @@ https://conda.io/miniconda.html
 
 
 ## Install Python
-Install Python using Conda
-Best working on Python 3.6
+Install Python using Conda. Rasa best works on Python 3.6
+```
 conda install python=3.6
+```
+
 
 ## Create Environment for Rasa Project under Python 3.6
 We except you have install python 3.6 using Conda command
