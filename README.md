@@ -65,3 +65,26 @@ Known Error
 rasa_core.exceptions.UnsupportedDialogueModelError: The model version is to old to be loaded by this Rasa Core instance. Either retrain the model, or run withan older version. Model version: 0.11.3 Instance version: 0.12.2 Minimal compatible version: 0.12.0
 
 pip install -U rasa_core==0.11.11
+
+
+## Process to Run this
+
+Step-1 Train Rasa NLU (Intent, Entity)
+```
+python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
+```
+
+Step-2 Generate Dialogs using Rasa Core (Flow)
+```
+python -m rasa_core.train -d domain.yml -s stories.md -o models/dialogue
+```
+
+Step-3 Run this Rasa Core Server
+```
+python -m rasa_core.run -d models/dialogue -u models/current/nlu
+```
+
+Step-4 Start Bot and start chatting
+```
+python bot.py
+```
