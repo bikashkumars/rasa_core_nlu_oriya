@@ -21,6 +21,7 @@ while True:
     if a == 'stop':
         break
     responses = agent.handle_message(a)
+    #print(responses)
     for r in responses:
         messages.append(r.get("text"))
     

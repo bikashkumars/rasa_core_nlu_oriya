@@ -44,7 +44,7 @@ pip install -U rasa_core==0.11.11
 
 ## Clone this repo
 ```
-git clone git@github.com:bikashkumars/rasa_nlu_oriya.git
+git@github.com:bikashkumars/rasa_core_nlu_oriya.git
 ```
 
 ## Run Rasa command to create Model
